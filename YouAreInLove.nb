@@ -1,0 +1,346 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13495,        338]
+NotebookOptionsPosition[     12025,        305]
+NotebookOutlinePosition[     12461,        322]
+CellTagsIndexPosition[     12418,        319]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"oV", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\python\\\\gits\\\\taylorsversion\\\\CSVs\\\\Original\\\\You \
+Are In Love.wav.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"oV", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"oV", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TV", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\python\\\\gits\\\\taylorsversion\\\\CSVs\\\\Taylor's Version\\\
+\\You Are In Love.wav.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TV", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"TV", ",", "1"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.929539337121549*^9, 3.929539339389276*^9}, {
+   3.929539377163038*^9, 3.929539426875429*^9}, {3.929539489605576*^9, 
+   3.9295394978591137`*^9}, {3.9295395704178853`*^9, 3.929539637453838*^9}, 
+   3.9295400169411073`*^9},
+ CellLabel->"In[87]:=",ExpressionUUID->"ee8593a7-6782-4eae-a910-22178669a3d8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Mean", "[", 
+  RowBox[{"oV", "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", "21"}], "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mean", "[", 
+  RowBox[{"TV", "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.929539889650146*^9, 3.9295399804116874`*^9}, {
+  3.9295400225584946`*^9, 3.929540024311499*^9}, {3.9295406809102583`*^9, 
+  3.929540694036287*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"81796d20-a57b-4dba-b5b6-eaf1fd496526"],
+
+Cell[BoxData["17.8503860274866`"], "Output",
+ CellChangeTimes->{{3.929539891479147*^9, 3.929539982245195*^9}, {
+  3.929540020494795*^9, 3.929540024599495*^9}, {3.929540682135677*^9, 
+  3.9295406942093754`*^9}},
+ CellLabel->"Out[66]=",ExpressionUUID->"0ace19bc-93a4-4ad7-92b3-2fef08f8681c"],
+
+Cell[BoxData["2841.`"], "Output",
+ CellChangeTimes->{{3.929539891479147*^9, 3.929539982245195*^9}, {
+  3.929540020494795*^9, 3.929540024599495*^9}, {3.929540682135677*^9, 
+  3.9295406942222843`*^9}},
+ CellLabel->"Out[67]=",ExpressionUUID->"bd417912-3377-4195-adb3-4b8378f6ffcd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"BoxWhiskerChart", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"oV", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "x"}], "]"}], "]"}], ",", 
+       RowBox[{"TV", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "x"}], "]"}], "]"}]}], "}"}], ",", 
+     "\"\<Notched\>\""}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "2", ",", "21", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.929540540700774*^9, 3.9295406294618874`*^9}, {
+  3.9295406630932455`*^9, 3.9295407231486893`*^9}, {3.9295407860206313`*^9, 
+  3.929540857025378*^9}, {3.929540919007532*^9, 3.9295409254123573`*^9}, {
+  3.929540957081061*^9, 3.929540958617058*^9}},
+ CellLabel->"In[91]:=",ExpressionUUID->"e4950caf-b255-47f3-b1de-3794831d0696"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 7, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 2, 21, 1}}, Typeset`size$$ = {
+    417., {115., 126.33648045403262`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 2}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> BoxWhiskerChart[{
+         Part[$CellContext`oV, All, $CellContext`x$$], 
+         Part[$CellContext`TV, All, $CellContext`x$$]}, "Notched"], 
+      "Specifications" :> {{$CellContext`x$$, 2, 21, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{952., {265.76806657444683`, 277.23193342555317`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.929540578039872*^9, 3.929540630054885*^9}, {
+   3.9295406983019896`*^9, 3.9295407266299*^9}, {3.929540791293806*^9, 
+   3.9295408574988165`*^9}, {3.9295409261374273`*^9, 
+   3.9295409287534018`*^9}, {3.9295409591520576`*^9, 3.9295409617705708`*^9}, 
+   3.9295436985922422`*^9, {3.9295437361686773`*^9, 3.9295437404074383`*^9}},
+ CellLabel->"Out[91]=",ExpressionUUID->"94a60c3e-f2a5-40d4-99a0-507e09ed0fa9"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"oV", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\python\\\\gits\\\\taylorsversion\\\\CSVs\\\\Original\\\\Mean.\
+wav.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"oV", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"oV", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TV", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\python\\\\gits\\\\taylorsversion\\\\CSVs\\\\Taylor's Version\\\
+\\Mean.wav.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TV", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"TV", ",", "1"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.929542606728954*^9, 3.929542613456688*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"6d036307-8197-45d8-80e7-40b3ed422bd2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"BoxWhiskerChart", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"oV", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "x"}], "]"}], "]"}], ",", 
+       RowBox[{"TV", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "x"}], "]"}], "]"}]}], "}"}], ",", 
+     "\"\<Notched\>\""}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "2", ",", "21", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[81]:=",ExpressionUUID->"7bdc25d3-d8e1-471e-8793-5e8678265a71"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 21, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 2, 21, 1}}, Typeset`size$$ = {
+    417., {117., 127.77067309254701`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 2}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> BoxWhiskerChart[{
+         Part[$CellContext`oV, All, $CellContext`x$$], 
+         Part[$CellContext`TV, All, $CellContext`x$$]}, "Notched"], 
+      "Specifications" :> {{$CellContext`x$$, 2, 21, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{952., {267.76806657444683`, 279.23193342555317`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9295426302443237`*^9, 3.929542634705168*^9}},
+ CellLabel->"Out[81]=",ExpressionUUID->"8b593416-272c-45c6-afba-fb6e10cb95a1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"oV", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\python\\\\gits\\\\taylorsversion\\\\CSVs\\\\Original\\\\You \
+Are In Love.wav.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"oV", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"oV", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TV", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\python\\\\gits\\\\taylorsversion\\\\CSVs\\\\Taylor's Version\\\
+\\Mean.wav.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TV", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"TV", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"BoxWhiskerChart", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"oV", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "x"}], "]"}], "]"}], ",", 
+       RowBox[{"TV", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "x"}], "]"}], "]"}]}], "}"}], ",", 
+     "\"\<Notched\>\""}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "2", ",", "21", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9295427031952357`*^9, 3.92954270997523*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"a573baa9-f4e8-4250-b45b-17d7c7402429"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 21, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 2, 21, 1}}, Typeset`size$$ = {
+    417., {117., 127.77067309254701`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 2}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> BoxWhiskerChart[{
+         Part[$CellContext`oV, All, $CellContext`x$$], 
+         Part[$CellContext`TV, All, $CellContext`x$$]}, "Notched"], 
+      "Specifications" :> {{$CellContext`x$$, 2, 21, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{952., {267.76806657444683`, 279.23193342555317`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9295427107291594`*^9, 3.929542713318022*^9}},
+ CellLabel->"Out[86]=",ExpressionUUID->"8edcd57c-922a-420b-9cdb-54f816c6ee46"]
+}, Open  ]]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5bb17a16-7f5e-4513-8b42-145f80b9d454"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1068, 27, 399, "Input",ExpressionUUID->"ee8593a7-6782-4eae-a910-22178669a3d8"],
+Cell[CellGroupData[{
+Cell[1651, 51, 527, 12, 95, "Input",ExpressionUUID->"81796d20-a57b-4dba-b5b6-eaf1fd496526"],
+Cell[2181, 65, 289, 4, 88, "Output",ExpressionUUID->"0ace19bc-93a4-4ad7-92b3-2fef08f8681c"],
+Cell[2473, 71, 278, 4, 88, "Output",ExpressionUUID->"bd417912-3377-4195-adb3-4b8378f6ffcd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2788, 80, 835, 20, 95, "Input",ExpressionUUID->"e4950caf-b255-47f3-b1de-3794831d0696"],
+Cell[3626, 102, 2021, 38, 603, "Output",ExpressionUUID->"94a60c3e-f2a5-40d4-99a0-507e09ed0fa9"]
+}, Open  ]],
+Cell[5662, 143, 865, 23, 399, "Input",ExpressionUUID->"6d036307-8197-45d8-80e7-40b3ed422bd2"],
+Cell[CellGroupData[{
+Cell[6552, 170, 566, 16, 95, "Input",ExpressionUUID->"7bdc25d3-d8e1-471e-8793-5e8678265a71"],
+Cell[7121, 188, 1740, 34, 607, "Output",ExpressionUUID->"8b593416-272c-45c6-afba-fb6e10cb95a1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8898, 227, 1368, 39, 476, "Input",ExpressionUUID->"a573baa9-f4e8-4250-b45b-17d7c7402429"],
+Cell[10269, 268, 1740, 34, 607, "Output",ExpressionUUID->"8edcd57c-922a-420b-9cdb-54f816c6ee46"]
+}, Open  ]]
+}
+]
+*)
+
